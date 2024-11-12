@@ -10,11 +10,10 @@ import java.util.Map;
 @RestController
 @RequestMapping("api/v1/put")
 public class PutController {
-
-    @PutMapping(value = "/information")
-    public ResponseEntity<PostRequestDto> put3 (@RequestBody PostRequestDto postRequestDto) {
+    @PutMapping(value = "/user")
+    public ResponseEntity<PostRequestDto> put (@RequestBody PostRequestDto postRequestDto) {
         return ResponseEntity
-                .status(HttpStatus.ACCEPTED)
+                .status(HttpStatus.ACCEPTED) // 202
                 .body (postRequestDto);
     }
 }
